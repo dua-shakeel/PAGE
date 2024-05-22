@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        .icons {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            color:white;
+            margin:15px;
+    }
+    </style>
+    <style>
+        /* Basic reset for list styles */
+        ul {
+            margin: 0px;
+            padding: 0px;
+            list-style: none;
+        }
+
+        /* Style for the navigation bar */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color:rgb(184, 43, 255);
+            color: white;
+            padding: 0px 0px;
+        }
+
+        /* Logo styles */
+        .navbar-logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        /* Navigation menu styles */
+        .navbar-menu {
+            display: flex;
+        }
+
+        .navbar-menu li {
+            padding: 10px 15px;
+        }
+
+        .navbar-menu a {
+            text-decoration: none;
+            color: white;
+            transition: color 0.3s;
+        }
+
+        .navbar-menu a:hover {
+            color: #ddd;
+        }
+    </style>
+    <style>
+        /* Style for the header section */
+        .secondsection{
+            background-image: url(What-is-User-Interface-UI-design-1.jpg);
+            background-repeat: no-repeat;
+            background-position:center ;
+            background-size: cover;
+            width: 100%;
+            height: 400px;
+        }
+        .header-section {
+            text-align: left;
+            padding: 50px 20px;
+            background-color: none;
+            
+        }
+
+        /* Title styles */
+        .header-title {
+            font-size: 48px;
+            font-weight: bold;
+            margin: 0;
+            color: #333;
+        }
+
+        /* Subtitle styles */
+        .header-subtitle {
+            font-size: 24px;
+            margin: 10px 0;
+            color: #333;
+        }
+
+        /* Call-to-action button styles */
+        .header-cta {
+            padding: 10px 30px;
+            font-size: 18px;
+            text-decoration: none;
+            color: white;
+            background-color: #007bff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .header-cta:hover {
+            background-color: #0056b3;
+        }
+    </style>
+    <style>
+        /* Style for the platforms section */
+        .platforms-section {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 60px;
+            background-color: #f0f0f0;
+        }
+
+        /* Style for each platform */
+        .platform {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 5px 50px;
+        }
+
+        .platform-icon {
+            width: 100px;
+            /* Adjust as needed */
+            height: 75px;
+            /* Adjust as needed */
+            margin-bottom: 35px;
+        }
+
+        .platform-name {
+            font-size: 20px;
+            color: #333;
+            margin: 15px;
+        }
+    </style>
+    <style>
+        /* Style for the most popular section */
+        .most-popular-section {
+            padding: 100px;
+            background-color: #fff;
+            text-align: center;
+            font-size: large;
+        }
+
+        /* Style for each software item */
+        .flex-container {
+            display: flex;
+        }
+        .flex-container {
+          
+            margin: 5px;
+            padding: 10px;
+            font-size: 10px;
+        }
+        element.style {
+           background-color: white;
+           box-shadow: 10px 10px 25px rgba(0,0,0,0.1);
+        }
+        .software-item {
+            border-bottom: 1px solid #eee;
+            padding: -1px 25px;
+}
+
+        .software-name {
+            font-size: 20px;
+            font-weight:bold;
+            color: #333;
+            margin: 10px;
+        }
+
+        .software-description {
+            font-size: 15px;
+            color: #666;
+            margin: 0px ;
+        }
+
+        .software-rating {
+            color: #f0ad4e;
+            /* Example color for star ratings */
+            margin-bottom: 15px;
+            size: 20px;
+
+            
+        }
+
+        .download-button {
+            padding: 0px;
+            font-size: 16px;
+            color: white;
+            background-color: #28a745;
+            margin-right: 5px;
+            margin-left:30px;
+            border-radius: 30px;
+            border:none;
+            width: 100px;
+
+        
+        }
+
+        .download-button:hover {
+            background-color: #218838;
+        }
+    </style>
+    <style>
+        /* Style for the pagination container */
+        .pagination {
+            display: flex;
+            justify-content: center;
+            padding: 20px;
+            background-color: white;
+        }
+
+        /* Style for the pagination list */
+        .pagination-list {
+            list-style: none;
+            display: flex;
+            padding: 10px;
+            margin: 0;
+        }
+
+        /* Style for each pagination item */
+        .pagination-item {
+            margin: 0 5px;
+        }
+
+        /* Style for each pagination link */
+        .pagination-link {
+            text-decoration: none;
+            padding: 10px 15px;
+            color: #007bff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .pagination-link:hover,
+        .pagination-link:focus {
+            background-color: #007bff;
+            color: white;
+        }
+
+        /* Style for the active pagination link */
+        .pagination-link.active {
+            background-color: #007bff;
+            color: white;
+        }
+
+        /* Style for disabled pagination links */
+        .pagination-link.disabled {
+            color: #ccc;
+            cursor: not-allowed;
+        }
+    </style>
+    <style>
+        /* Style for the testimonial block */
+        .testimonial {
+            max-width: 6000px;
+            margin: auto;
+            background-image: url(lavender.jpg);
+            padding: 150px;
+        }
+
+        /* Style for the quote text */
+        .quote {
+            font-style: italic;
+            font-size: 24px;
+            color: white;
+            margin-bottom: 30px;
+        }
+
+        /* Style for the author information */
+        .author {
+            font-weight: bold;
+            font-size: 18px;
+            color: white;
+        }
+    </style>
+    <style>
+        /* Style for the newsletter section */
+        .newsletter-section {
+            text-align: center;
+            padding: 150px;
+            background-color: #f8f8f8;
+        }
+
+        /* Style for the newsletter form */
+        .newsletter-form {
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        /* Style for the email input field */
+        .input-email {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        /* Style for the subscribe button */
+        .subscribe-button {
+            padding: 10px 20px;
+            font-size: 16px;
+            text-decoration: none;
+            color: white;
+            background-color: #5f5ff4;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .subscribe-button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+    <style>
+        /* Style for the footer */
+        .footer {
+            background-color: rgb(184, 43, 255);
+            color: #fff;
+            padding: 20px;
+            text-align:left;
+            box-sizing: border-box;
+            margin-top: 30px;
+            width:70%;
+            padding:85px 19%;
+            display:flex;
+            text-align: center;
+        
+        }
+
+        /* Style for footer sections */
+        .footer-section {
+            margin-bottom: 20px;
+            padding:50px
+        }
+
+        /* Style for section titles */
+        .footer-title {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        /* Style for quick links */
+        .footer-links a {
+            color: #fff;
+            text-decoration: none;
+            margin-right: 10px;
+        }
+
+        /* Style for legal information */
+        .legal-info {
+            font-size: 14px;
+            margin-bottom: 10px;
+            text-align: left;
+        }
+        /* Style for social media icons */
+        .social-icons a {
+           color:white;
+           font-size: 15px;
+           margin-right: 10px;
+        }
+    </style>
+    <style>
+         .copyright {
+            background-color:#0056b3;
+            padding: 1px;
+            text-align: center;
+            font-size: 14px;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    
+    <div style="background-color: rgb(184, 43, 255);">
+    <div class="header">
+        <a href="help@softwarecompany.com">help@softwarecompany.com</a><br>
+        <div class="icons">
+            <a href="#" class="fa fa-facebook"></a>
+            <a href="#" class="fa fa-twitter"></a>
+            <a href="#" class="fa fa-google"></a>
+            <a href="#" class="fa fa-linkedin"></a>
+            <a href="#" class="fa fa-instagram"></a>
+            <a href="#" class="fa fa-pinterest"></a>
+        </div>
+        </div>
+        <br>
+    <nav class="navbar">
+        <div class="navbar-logo">LOGO HERE</div>
+        <ul class="navbar-menu">
+            <li><a href="#">Categories</a></li>
+            <li><a href="#">Popular Apps</a></li>
+            <li><a href="#">Best Apps</a></li>
+            <li><a href="#">Web Apps</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact Us</a></li>
+        </ul>
+    </nav>
+    <div style="  width: 100%;" class="secondsection">
+        <div style="width: 50%; padding-top: 150px; padding-left: 20px;" class="second-section-info">
+             <h1 class="header-title">THE LATEST</h1>
+             <p class="header-subtitle">Versions of the Best Software</p><br><br>
+             <button class="header-cta">DOWNLOAD NOW!</button>
+        </div>
+
+    </div>
+    
+    <div class="platforms-section">
+        <div class="platform">
+            <img class="platform-icon" src="window.png" alt="Windows">
+            <div class="platform-name">Windows</div>
+        </div>
+        <div class="platform">
+            <img class="platform-icon" src="android.png" alt="Android">
+            <div class="platform-name">Android</div>
+        </div>
+        <div class="platform">
+            <img class="platform-icon" src="Apple_macintosh.webp" alt="Mac">
+            <div class="platform-name">Mac</div>
+        </div>
+        <div class="platform">
+            <img class="platform-icon" src="mac.png" alt="iPhone">
+            <div class="platform-name">iPhone</div>
+        </div>
+    </div>
+    <div class="most-popular-section">
+       <u><h2>Most Popular</h2></u><br>
+    
+        <!-- Software Item 1 -->
+        <div class= "software-item" style="background-color: white; box-shadow: 10px 10px 25px rgba(0,0,0.1);">
+            <div class="flex-container">
+                <img class="platform-icon" src="firefox.png" alt="firefox">
+                <h3 class="software-name">Firefox</h3><br><br>
+                <div class="software-rating"><br><br><br><br>★★★★☆</div>
+                <p class="software-description">Mozilla Firefox, or simply Firefox, is a free and open-source web browser developed<br>
+                by the Mozilla Foundation and its subsidiary, the Mozilla Corporation. 
+                It uses the<br> Gecko rendering engine to display web pages, which implements current and 
+                anticipated web standards..</p><br><br>
+            <button class="download-button">Free Download</button><br><br>(150 MB safe and secure) 
+            </div>
+        </div>
+        <!-- Software Item 2 -->
+        <div class="software-item" style="background-color: white; box-shadow: 10px 10px 25px rgba(0,0,0.1);">
+            <div class="flex-container">
+            <img class="platform-icon" src="WinRAR_Logo_2018.webp" alt="winnar">
+            <h3 class="software-name">Winrar</h3><br><br>
+            <div class="software-rating"><br><br><br><br>★★★★☆</div>
+            <p class="software-description">WinRAR is a trialware file archiver utility for Windows, developed by Eugene Roshal of 
+            win.rar GmbH<br>It can create and view archives in RAR or ZIP file formats,and unpack numerous archive file formats.</p>
+            <button class="download-button">Free Download</button><br><br>(3.6MB safe and secure) 
+            </div>
+        </div>
+        <!-- Software Item 3 -->
+        <div class="software-item" style="background-color: white; box-shadow: 10px 10px 25px rgba(0,0,0.1);">
+            <div class="flex-container">
+            <img class="platform-icon" src="ps.jpg" alt="adobe photoshop">
+            <h3 class="software-name">Adobe Photoshop</h3><br><br>
+            <div class="software-rating"><br><br><br><br>★★★★☆</div>
+            <p class="software-description">Adobe Photoshop is a raster graphics editor developed and published
+            by Adobe for Windows and macOS.<br>It was originally created in 1987 by Thomas and John Knoll.<br> 
+            Since then, the software has become the most used tool for professional 
+            digital art, especially in raster graphics editing</p>
+            <button class="download-button">Free Download</button><br><br>(2.5MB safe and secure)
+            </div>
+        </div>
+        <!-- Software Item 4 -->
+        <div class="software-item" style="background-color: white; box-shadow: 10px 10px 25px rgba(0,0,0.1);">
+            <div class="flex-container">
+            <img class="platform-icon" src="dreamwaver.webp" alt="adobe dreamwaver">
+            <h3 class="software-name">Adobe Dreamwaver</h3><br><br>
+            <div class="software-rating"><br><br><br><br>★★★★☆</div>
+            <p class="software-description">Adobe Dreamweaver is a proprietary web development tool from Adobe<br> 
+            It was created by Macromedia in 1997 and developed by them until Macromedia was acquired by Adobe Systems in 2005.<br> 
+            Adobe Dreamweaver is available for the macOS and Windows operating systems</p><br>
+            <button class="download-button">Free Download</button><br><br>(5MB safe and secure)
+            </div>
+        </div>
+        <!-- Software Item 5 -->
+        <div class="software-item" style="background-color: white; box-shadow: 10px 10px 25px rgba(0,0,0.1);">
+            <div class="flex-container">
+            <img class="platform-icon" src="WhatsApp.svg.webp" alt="whatsapp">
+            <h3 class="software-name">Whatsapp</h3><br><br>
+            <div class="software-rating"><br><br><br><br>★★★★★</div>
+            <p class="software-description">WhatsApp is an instant messaging and voice-over-IP service owned by technology conglomerate
+             Meta. <br>It allows users to send text, voice messages and video messages, make voice 
+            and video calls,<br> and share images, documents, user locations, and other content.</p>
+            <button class="download-button">Free Download</button><br><br>(170MB safe and secure)
+            </div>
+        </div>
+        <!-- Software Item 6 -->
+        <div class="software-item" style="background-color: white; box-shadow: 10px 10px 25px rgba(0,0,0.1);">
+            <div class="flex-container">
+            <img class="platform-icon" src="fz.png" alt="filezilla">
+            <h3 class="software-name">File Zilla</h3><br><br>
+            <div class="software-rating"><br><br><br><br>★★★★☆</div>
+            <p class="software-description">FileZilla is a free and open-source, cross-platform FTP application, consisting of 
+            FileZilla Client and FileZilla Server.<br> Clients are available for Windows, Linux, and macOS. 
+            Both server and client support FTP and FTPS,<br> while the client can in addition connect to SFTP servers.</p>
+            <button class="download-button">Free Download</button><br><br>(280MB safe and secure)
+            </div>
+        </div>    
+    </div>
+    <div class="pagination">
+        <ul class="pagination-list">
+            <li class="pagination-item"><a href="#" class="pagination-link disabled">«</a></li>
+            <li class="pagination-item"><a href="#" class="pagination-link active">1</a></li>
+            <li class="pagination-item"><a href="#" class="pagination-link">2</a></li>
+            <li class="pagination-item"><a href="#" class="pagination-link">3</a></li>
+            <li class="pagination-item"><a href="#" class="pagination-link">4</a></li>
+            <li class="pagination-item"><a href="#" class="pagination-link">5</a></li>
+            <li class="pagination-item"><a href="#" class="pagination-link">»</a></li>
+        </ul>
+    </div>
+    <div class="testimonial-section">
+        <div class="testimonial">
+            <img class="" src="" alt="">
+            <p class="quote">"Success is Not Final, Failure is Not Fatal: it is the Courage to Continue that Counts. ..."</p>
+            <p class="author">John Doe - CEO, Company Name</p>
+        </div>
+    </div>
+    <div class="newsletter-section">
+        <u><h1>Newsletter</h1></u>
+        <img class="newsletter" src="Screenshot (280).png" alt="newsletter">
+        <h2>Subscribe to Our Newsletter</h2>
+        <p>Stay up to date with our latest news and updates.</p>
+        <div class="flex-container">
+        <form class="newsletter-form">
+            <input type="email" class="input-email" placeholder="Enter your email address" required>
+            <button type="submit" class="subscribe-button">Subscribe</button>
+        </form>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="footer-section">
+            <h3 class="footer-title">Quick Links</h3>
+            <div class="footer-links">
+                <a href="#">>>Categories</a> <br>
+                <a href="#">>>About Us</a><br>
+                <a href="#">>>Services</a> <br>
+                <a href="#">>>Contact</a><br>
+            </div>
+        </div>
+        <div class="footer-section">
+            <h3 class="footer-title">Legal Information</h3>
+            <p class="legal-info">>>legal information<br>
+            >>term of uses<br>
+            >>privacy policy<br>
+            >>cookies policy</p>
+        </div>
+        <div class="social-icons">
+            <h3 class="footer-title">Let's contact</h3>
+            <a href="#" class="fa fa-facebook">Facebook</a><br>
+            <a href="#" class="fa fa-twitter">Twitter</a><br>
+            <a href="#" class="fa fa-instagram">Instagram</a><br>
+            <a href="#" class="fa fa-snapchat">Snapchat</a><br>
+            <a href="#" class="fa fa-linkedin">Linkedin</a>
+          </div>     
+    </footer>
+    <div class="copyright">
+        <p>&copy; 2024 Your Website Name. All rights reserved.</p>
+      </div> 
+</body>
+</html>
